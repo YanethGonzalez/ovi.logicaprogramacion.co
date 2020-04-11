@@ -79,13 +79,21 @@ nav#menu_principal{
     position: absolute;
     top:38px;
     left: 0px;
-    z-index: 1;
+    z-index: 99;
     background: linear-gradient(#2a4885, #577cc9);
     box-shadow: 0 -1px 0 rgba(255, 255, 255, 0,3);
     border-radius: 3px;
     transition: all 0,2s ease-in-out;
 }
 
+#menu ul li a:hover{
+    background: #4384b9;
+}
+
+#menu li:hover{
+    background: #4384b9;
+        
+}
 #menu li:hover > ul{
     opacity: 1;
     visibility: visible;
@@ -100,12 +108,13 @@ nav#menu_principal{
 }
 
 #menu ul a{
-    padding: 10px;
-    width: 130px;
+    padding: 10px 10px 10px 10px;
+    width: 200px;
     display: block;
     white-space: nowrap;
     float: none;
     text-transform: none;
+    text-align: left;
 }
 
 #menu ul a.hover{
@@ -148,15 +157,15 @@ nav#menu_principal{
 }
 
 .contenido-izquierdo{
-    margin: 0px 10px 0px 0px;
-    width: 50%;
+    margin: 20px 10px 20px 0px;
+    width: 40%;
     min-height: 200px;
     height: auto;
     float: left;
     padding: 0px 20px;
     /*border: 1px solid darkslategrey;*/
     background: #fff;
-    box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+    box-shadow:  2px 4px 15px -7px rgba(0,0,0,0.75);
 
 }
 
@@ -173,17 +182,31 @@ nav#menu_principal{
 }
 
 .contenido-central{
-    width: 25%;
+    width: 30%;
     float: left;
-    margin: 0px 5px 0px 0px;
-    padding: 50px 0px 0px 0px;
-    
+    margin: 20px 8px 20px 3px;
+    padding: 10px;
+    text-align: center;    
+    background: rgb(253, 173, 1);
+    box-shadow:  2px 4px 15px -7px rgba(0,0,0,0.75);
+}
+
+.contenido-central h2{
+    color: #000;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.contenido-central p{
+    text-align: justify;
+    margin: 0 5px;
 }
 
 .video{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px 0;
 }
 
 iframe{
@@ -192,13 +215,10 @@ iframe{
 }
 
 .contenido-derecha{
-    clear: left;
     width: 15%;
     height: auto;
     background: #333;
-    float: right;
-    display: block;
-    padding: 2px;
+    padding: 0 0 2px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,6 +226,8 @@ iframe{
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    margin: 20px 0px 20px 0px;
+    border-radius: 10px;
 }
 
 /*Clase para pagina autores ===================================>*/
@@ -220,7 +242,7 @@ iframe{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 7px;
+    margin: 30px 7px;
     padding: 5px 5px 15px 5px;
 }
 
@@ -258,12 +280,19 @@ iframe{
 
 .contenido-informacion{
     width: 90%;
-    display: flex;
+    overflow: hidden;
+    display: block;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
     margin: 30px 30px;
     box-shadow:  2px 4px 15px -4px rgba(0,0,0,0.75);
+}
+
+.contenido-pdf{
+    display: flex;
+    justify-content: center;
+
 }
 
 .contenido-informacion iframe{
@@ -288,28 +317,186 @@ iframe{
 }
 
 .contenido-informacion p{
-    width: 100%;
+    width: 84%;
     font-size: 18px;
     margin: 10px 8% 10px 8%;
     text-align: left;
 }
 
 .contenido-informacion li{
-    width: 100%;
+    width: 86%;
     font-size: 18px;
     margin: 2px 8% 2px 10%;
     text-align: left;
 }
 
+.container-video .video-responsive{
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+    z-index: 10;
+    margin: 0 80px 0 80px;
+ }
 
+ .video-responsive iframe,
+ .video-responsive object,
+ .video-responsive embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+} 
+
+.cita-bibliografica blockquote{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+}
+
+.cita-bibliografica p{
+    padding: 0;
+    font-size: 15px;
+    font-style: oblique;
+    color: #666;
+    text-align: center;
+    
+}
+
+.cita-bibliografica a{
+    font-size: 15px;
+    font-style: oblique;
+    color: rgb(22, 75, 105);
+}
 
 footer{
     background: #333 url(../img/logoUNADMobile-HD.png) no-repeat top 30px left 10%;
     background-size: 155px 38px;
     padding: 10px 10px 10px 30%;
-    width: 70% !important; 
+    width: 69.10% !important; 
     color: #FFF;
     font-size: 13px;
 }
 
+/*Esta linea esconde el menu movil*/
 
+#btn-menu {
+    display: none;
+  }
+  
+  header label {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
+
+/*Estilos para dispositivos moviles*/
+@media (max-width: 900px) {
+      
+    header{
+        height: 64px;
+        top: 0;
+        background: rgb(9, 21, 87);
+        color: #FFF;
+        display: block;
+        justify-content: flex-end;
+        position: fixed;
+        z-index: 3;
+        margin: 0;
+    }
+
+    header label {
+      display: block;
+      padding-top: 15px;
+      padding-left: 80%;
+      transition: all 0.4s ease;
+      height: 64px;
+    }
+
+    h1{
+        display: none;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .menu_responsive #menu {
+        display: flex;
+        list-style: none;
+      }
+      
+      .menu_responsive #menu {
+        display: none;
+      }
+    
+      .menu_responsive a:hover {
+        background: #2C3E50;
+      }
+
+    .menu_responsive {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 70%;
+      height: 100%;
+      transform: translateX(-100%);
+      transition: all 0.3s;
+      z-index: 1;
+      padding: 0;
+    }
+    
+    .menu_responsive #menu {
+      flex-direction: column;
+      display: block;
+      height: 100%;
+      border: none;
+      background: rgb(9, 24, 99);
+      z-index: 0;
+      overflow: hidden;
+    }
+    
+    .menu_responsive #menu li:hover ul {
+      display: none;
+      position: static;
+    }
+    
+    .menu_responsive a i {
+      position: absolute;
+      right: 16px;
+      line-height: 32px;
+    }
+
+    .menu_responsive #menu li{
+        border: none;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgb(8, 43, 99);
+        top: 0;
+    }
+
+    .menu_responsive #menu a{
+        width: 100%;
+        text-align: left;
+        padding: 20px 20px 20px 20px;
+    }
+  
+    #btn-menu:checked ~ .menu_responsive {
+      transform: translateX(0%);
+    }
+
+    .menu_responsive #menu .submenu li{
+        background: rgb(69, 145, 207);
+    }
+
+    .menu_responsive #menu .submenu li a{
+        padding: 15px 20px 15px 50px;
+    }
+
+    
+  }

@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Bienvenido al OVI Logica de programación donde aprenderemos los Métodos de Ordenación con Programación orientada a objetos">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!--Estos son estilos para menú responsive-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <!--Terminan  estilos para menú responsive-->
+
     <title>Autores</title>
 </head>
 <body>
@@ -12,25 +19,30 @@
         <img src="img/logoUnadColor.png" alt="Logo UNAD" class="logo">
         <h1 class="tituloprincipal">METODOS DE ORDENACIÓN CON PROGRAMACIÓN <br> ORIENTADA A OBJETOS</h1>
         <!--Dentro de la etiqueta <nav></nav> se encuentra el Menu-->
-		<nav id="menu_principal">
+		<input type="checkbox" id="btn-menu" />
+        <label for="btn-menu"><i class="fa fa-bars"></i></label>
+        <nav class="menu_responsive">
             <ul id="menu">
                 <li><a href="index.html">INICIO</a></li>
-                <li><a href="#">LECTURAS</a>
+                <li class="submenu"><a href="#">LECTURAS <i class="fa fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="#">Lectura1</a></li>
-                        <li><a href="#">Lectura2</a></li>
-                        <li><a href="#">Lectura3</a></li>
-                        <li><a href="#">Lectura4</a></li>
-                        <li><a href="#">Lectura5</a></li>
+                        <li><a href="lectura1.html">Fundamentos de Ordenación POO</a></li>
+                        <li><a href="lectura2.html">Metodos de Ordenamiento</a></li>
+                        <li><a href="lectura3.html">Ordenación Eficiente</a></li>
+                        <li><a href="lectura4.html">Analisis de Algoritmos</a></li>
+                        <li><a href="lectura5.html">POO con Java</a></li>
                     </ul>
                 </li>
-                <li><a href="#">MULTIMEDIA</a>
+                <li class="submenu"><a href="#">MULTIMEDIA <i class="fa fa-caret-down"></i></a>
                     <ul>
-                        <li><a href="#">Multimedia1</a></li>
-                        <li><a href="#">Multimedia2</a></li>
+                        <li><a href="multimedia1.html">Metodo Burbuja</a></li>
+                        <li><a href="multimedia2.html">Metodo Selección</a></li>
+                        <li><a href="multimedia3.html">Metodo Inserción</a></li>
+
                     </ul>
                 </li>
-                <li><a href="#">ACTIVIDADES</a>
+                <li class="submenu"><a href="#">ACTIVIDADES <i class="fa fa-caret-down"></i></a>
+
                     <ul>
                         <li><a href="#">Actividad1</a></li>
                         <li><a href="#">Actividad2</a></li>
@@ -61,5 +73,8 @@
             Institución de Educación Superior sujeta a inspección y vigilancia por el Ministerio de Educación Nacional
             </p>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="jquerry/main.js"></script>
 </body>
 </html>
